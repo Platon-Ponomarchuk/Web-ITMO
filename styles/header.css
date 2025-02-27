@@ -1,0 +1,32 @@
+.header {
+	position: sticky;
+	top: 0px;
+	z-index: 10;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30px;
+	padding: 30px;
+	background-color: rgba(163, 226, 249);
+}
+
+.header__menu {
+	display: flex;
+	gap: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.header__menu_item {
+	transition: transform 0.5s, color 0.3s;
+	cursor: pointer;
+}
+
+.header__menu_item:hover {
+	color: rgba(255, 102, 0, 0.921);
+	transform: scale(1.2);
+}
+
+.header__menu_item_active {
+	color: rgba(255, 134, 54, 0.921);
+}

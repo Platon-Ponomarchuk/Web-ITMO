@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="/styles/global.css" />
+		<title>Аукцион</title>
+	</head>
+	<body>
+		<header class="header">
+			<nav class="header__menu header__menu_pages">
+				<li class="header__menu_item" id="home">
+					<a href="index.html">Главная</a>
+				</li>
+				<li class="header__menu_item" id="profile">
+					<a href="profile.html">Профиль</a>
+				</li>
+				<li class="header__menu_item" id="toBuy">
+					<a href="toBuy.html">Список</a>
+				</li>
+			</nav>
+		</header>
+		<main class="profile__main">
+			<section class="profile">
+				<div class="profile-picture">
+					<img src="./images/test.JPG" alt="Аватар пользователя" />
+				</div>
+				<h2>Платон Пономарчук</h2>
+				<div>
+					<p>Email: test@example.com</p>
+					<p>Телефон: +7 999 123-45-67</p>
+				</div>
+			</section>
+
+			<section class="orders">
+				<h2>Мои заказы</h2>
+				<ul>
+					<li>Заказ #1234 - <span class="waiting">Ожидает отправки</span></li>
+					<li>Заказ #1233 - <span class="delivered">Доставлен</span></li>
+					<li>Заказ #1232 - <span class="cancelled">Отменён</span></li>
+				</ul>
+			</section>
+
+			<button class="logout-btn">Выйти</button>
+		</main>
+		<footer class="footer">
+			<div class="footer__contacts">
+				<p class="footer__contacts_phone"></p>
+				<p class="footer__contacts_email"></p>
+			</div>
+
+			<p class="load_time"></p>
+
+			<ul class="footer__social" id="contact">
+				<li class="footer__social_item">
+					<img src="" alt="" class="social_item__image" />
+				</li>
+				<li class="footer__social_item">
+					<img src="" alt="" class="social_item__image" />
+				</li>
+				<li class="footer__social_item">
+					<img src="" alt="" class="social_item__image" />
+				</li>
+			</ul>
+		</footer>
+	</body>
+	<script src="./scripts/profile.js" type="module"></script>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Список покупок</title>
+		<link rel="stylesheet" href="/styles/global.css" />
+	</head>
+	<body>
+		<header class="header">
+			<nav class="header__menu header__menu_pages">
+				<li class="header__menu_item" id="home">
+					<a href="index.html">Главная</a>
+				</li>
+				<li class="header__menu_item" id="profile">
+					<a href="profile.html">Профиль</a>
+				</li>
+				<li class="header__menu_item" id="toBuy">
+					<a href="toBuy.html">Список</a>
+				</li>
+			</nav>
+		</header>
+		<main class="main__tobuy">
+			<div class="container">
+				<h2 class="title">Список покупок</h2>
+				<form class="shopping_form">
+					<input type="text" class="input name-input" maxlength="20" placeholder="Название продукта" required />
+					<input type="number" class="input quantity-input" placeholder="Кол-во" min="1" required />
+					<select class="select category-select">
+						<option value="Продукты" data-color="green">Продукты</option>
+						<option value="Одежда" data-color="orange">Одежда</option>
+						<option value="Техника" data-color="blue">Техника</option>
+						<option value="Гигиена" data-color="red">Гигиена</option>
+						<option value="Игрушки" data-color="purple">Игрушки</option>
+					</select>
+					<button type="submit" class="button add-button">Добавить</button>
+				</form>
+
+				<ul class="shopping_list"></ul>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__contacts">
+				<p class="footer__contacts_phone"></p>
+				<p class="footer__contacts_email"></p>
+			</div>
+
+			<p class="load_time"></p>
+
+			<ul class="footer__social" id="contact">
+				<li class="footer__social_item">
+					<img src="" alt="" class="social_item__image" />
+				</li>
+				<li class="footer__social_item">
+					<img src="" alt="" class="social_item__image" />
+				</li>
+				<li class="footer__social_item">
+					<img src="" alt="" class="social_item__image" />
+				</li>
+			</ul>
+		</footer>
+		<script src="./scripts/tobuy.js" type="module"></script>
+	</body>
+</html>

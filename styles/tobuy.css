@@ -1,0 +1,95 @@
+.main__tobuy {
+	padding: 20px;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	width: clamp(335px, 80%, 600px);
+	margin: auto;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+.title {
+	border-bottom: 1px solid #ccc;
+	padding: 5px;
+	font-weight: 300;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+.shopping_form {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	font-size: 16px;
+}
+
+.input,
+.select {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.input:focus,
+.select:focus {
+	border-color: #28a745;
+	outline: none;
+}
+
+.button {
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.add-button {
+	color: white;
+	background: #28a745;
+}
+
+.add-button:hover {
+	background: #218838;
+}
+
+.shopping_list {
+	padding: 0;
+	list-style: none;
+}
+
+.shopping_item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin-top: 5px;
+	border-radius: 5px;
+	padding: 10px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	background: #ffffff;
+}
+
+.marker {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+
+.delete_button {
+	border: none;
+	border-radius: 5px;
+	padding: 5px 10px;
+	color: white;
+	background: red;
+	cursor: pointer;
+}
+
+.delete_button:hover {
+	background: darkred;
+}

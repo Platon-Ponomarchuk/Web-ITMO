@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="/styles/global.css" />
+		<title>Аукцион</title>
+	</head>
+	<body>
+		<header class="header">
+			<nav class="header__menu header__menu_pages">
+				<li class="header__menu_item" id="home">
+					<a href="index.html">Главная</a>
+				</li>
+				<li class="header__menu_item" id="profile">
+					<a href="profile.html">Профиль</a>
+				</li>
+				<li class="header__menu_item" id="toBuy">
+					<a href="toBuy.html">Список</a>
+				</li>
+			</nav>
+		</header>
+		<main class="main">
+			<section class="main__running_line">
+				<p class="message">
+					"Покупай вещи выгодно на нашем аукционе, здесь тебе всегда рады"<sub> c. мы</sub>
+				</p>
+			</section>
+
+			<section class="catalog">
+				<div class="loader"></div>
+				<ul class="main__catalog" id="catalog"></ul>
+				<button class="main__button" id="more">Показать ещё</button>
+			</section>
+
+			<section class="main__additional">
+				<button class="main__button" id="code">Показать код</button>
+
+				<pre class="main__code">
+                <code>
+    Структура карточки
+    &lt;li class="main__catalog_item"&gt;
+        &lt;img src="" alt="" class="item__image" /&gt;
+        &lt;h3&gt; class="item__title"&gt;&lt;/h3&gt;
+        &lt;p&gt; class="item__price"&gt;&lt;/p&gt;
+        &lt;button&gt; class="item__button"&gt;Добавить&lt;/button&gt;
+    &lt;/li&gt;
+                </code>
+            </pre>
+
+				<button class="main__button" id="table">Показать таблицу</button>
+				<div class="main__table">
+					<p>1111</p>
+					<p>2222</p>
+					<p>3333</p>
+					<p>4</p>
+					<p>5</p>
+					<p>6</p>
+					<p>7</p>
+					<p>8</p>
+					<p>9</p>
+					<p>10</p>
+					<p>11</p>
+					<p>12</p>
+					<p>13</p>
+					<p>14</p>
+					<p>15</p>
+					<p>16</p>
+					<p>17</p>
+					<p>18</p>
+					<p>19</p>
+					<p>20</p>
+					<p>21</p>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__contacts">
+				<p class="footer__contacts_phone"></p>
+				<p class="footer__contacts_email"></p>
+			</div>
+
+			<p class="load_time"></p>
+
+			<ul class="footer__social" id="contact">
+				<li class="footer__social_item">
+					<img src="" alt="" class="social_item__image" />
+				</li>
+				<li class="footer__social_item">
+					<img src="" alt="" class="social_item__image" />
+				</li>
+				<li class="footer__social_item">
+					<img src="" alt="" class="social_item__image" />
+				</li>
+			</ul>
+		</footer>
+	</body>
+	<script src="./scripts/script.js" type="module"></script>
+</html>
