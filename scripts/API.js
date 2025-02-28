@@ -37,7 +37,6 @@ export function getData() {
 			});
 		})
 		.catch((error) => {
-			console.log(error);
 			document.querySelector(".loader").style.display = "none";
 			document.querySelector(".main__catalog").style.display = "flex";
 			document.querySelector("#more").style.display = "none";
