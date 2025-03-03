@@ -81,7 +81,7 @@
 	border-radius: 50%;
 }
 
-.delete_button {
+.item__delete_button {
 	border: none;
 	border-radius: 5px;
 	padding: 5px 10px;
@@ -90,6 +90,6 @@
 	cursor: pointer;
 }
 
-.delete_button:hover {
+.item__delete_button:hover {
 	background: darkred;
 }

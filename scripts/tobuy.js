@@ -21,43 +21,25 @@ function save_shopping_list() {
 }
 
 function render_product(name, quantity, category, color) {
-	const li = document.createElement("li");
-	const marker = document.createElement("span");
-	const text_wrapper = document.createElement("div");
-	const name_span = document.createElement("span");
-	const quantity_span = document.createElement("span");
-	const category_span = document.createElement("span");
-	const delete_button = document.createElement("button");
+	const itemTemp = document.querySelector("#item-template");
+	const itemClone = itemTemp.content.cloneNode(true);
+	const item = itemClone.querySelector(".shopping_item");
+	
 
-	li.classList.add("shopping_item");
-	marker.classList.add("marker");
-	text_wrapper.classList.add("item_text");
-	name_span.classList.add("item_name");
-	quantity_span.classList.add("item_quantity");
-	category_span.classList.add("item_category");
-	delete_button.classList.add("delete_button");
+	item.querySelector(".marker").style.backgroundColor = color;
+	item.querySelector(".text__name").textContent = name;
+	item.querySelector(".text__quantity").textContent = ` - ${quantity} шт`;
+	item.querySelector(".text__category").textContent = ` (${category})`;
 
-	marker.style.backgroundColor = color;
-	name_span.textContent = name;
-	quantity_span.textContent = ` - ${quantity} шт`;
-	category_span.textContent = ` (${category})`;
-	delete_button.textContent = "×";
-
-	delete_button.addEventListener("click", () => {
+	item.querySelector(".item__delete_button").addEventListener("click", () => {
 		shopping_items = shopping_items.filter(
 			(item) => !(item.name === name && item.quantity === quantity && item.category === category)
 		);
-		li.remove();
+		item.remove();
 		save_shopping_list();
 	});
 
-	text_wrapper.append(name_span);
-	text_wrapper.append(quantity_span);
-	text_wrapper.append(category_span);
-	li.append(marker);
-	li.append(text_wrapper);
-	li.append(delete_button);
-	shopping_list.append(li);
+	shopping_list.append(item);
 }
 
 function add_product(name, quantity, category, color) {
@@ -69,10 +51,14 @@ function add_product(name, quantity, category, color) {
 
 form.addEventListener("submit", (event) => {
 	event.preventDefault();
-	const name = product_name_input.value.trim();
+	let name = product_name_input.value.trim();
 	const quantity = product_quantity_input.value;
 	const category = product_category_input.value;
 	const color = product_category_input.selectedOptions[0].dataset.color;
+
+	if (name === "") {
+		name = "Без названия";
+	}
 
 	add_product(name, quantity, category, color);
 
