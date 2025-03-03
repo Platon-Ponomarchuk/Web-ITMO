@@ -1,6 +1,11 @@
 import "./header.js";
 import { page_load_time } from "./loadtime.js";
 
+window.onload = () => {
+	load_shopping_list();
+	page_load_time();
+};
+
 const form = document.querySelector(".shopping_form");
 const shopping_list = document.querySelector(".shopping_list");
 const product_name_input = form.querySelector(".name-input");
@@ -24,7 +29,6 @@ function render_product(name, quantity, category, color) {
 	const itemTemp = document.querySelector("#item-template");
 	const itemClone = itemTemp.content.cloneNode(true);
 	const item = itemClone.querySelector(".shopping_item");
-	
 
 	item.querySelector(".marker").style.backgroundColor = color;
 	item.querySelector(".text__name").textContent = name;
@@ -64,8 +68,3 @@ form.addEventListener("submit", (event) => {
 
 	form.reset();
 });
-
-window.onload = () => {
-	load_shopping_list();
-	page_load_time();
-};
