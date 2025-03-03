@@ -2,7 +2,7 @@ let counter = 1;
 const catalog = document.querySelector(".main__catalog");
 
 export function getData() {
-	fetch(`http://jsonplaceholder.typicode.com/photos?albumId=${counter}`)
+	fetch(`https://jsonplaceholder.typicode.com/photos?albumId=${counter}`)
 		.then((response) => response.json())
 		.then((data) => {
 			counter++;
