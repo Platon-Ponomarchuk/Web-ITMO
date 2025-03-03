@@ -21,6 +21,11 @@ export function getData() {
 				title.classList.add("item__title");
 				price.classList.add("item__price");
 				button.classList.add("item__button");
+				// Атрибуты для работы с модальным окном Bootstrap
+				// data-bs-toggle - атрибут для открытия модального окна
+				// data-bs-target - атрибут для указания идентификатора модального окна
+				button.setAttribute("data-bs-toggle", "modal");
+				button.setAttribute("data-bs-target", "#modal");
 
 				image.src = item.url;
 				title.textContent = item.title.slice(0, 20);
